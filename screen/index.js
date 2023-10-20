@@ -1,5 +1,5 @@
 import Home from "./Home";
-import Loan from "./Loan";
+import Loan from ".//Loan/Loan";
 import Notification from "./Notification";
 import Profile from "./Profile";
 
