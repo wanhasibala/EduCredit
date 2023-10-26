@@ -10,7 +10,6 @@ const Tab = createBottomTabNavigator();
 const screenOptions = {
     tabBarShowLabel : false,
     tabBarHideOnKeyboard : true,
-    headerShown: false,
     tabBarStyle: {
         position: 'absolute',
         bottom : 0,
@@ -27,22 +26,27 @@ const BottomTabNavigator = () => {
         <Tab.Screen name='Home' component={Home} options={{
             tabBarIcon: ({focused}) => {
                 return <Ionicons name={focused ? 'home' : 'home-outline'} size={24} color={focused ? COLORS.primary : COLORS.gray2 }/> 
-            }
+            },
+            headerShown: false
         }}/>
         <Tab.Screen name='Loan' component={Loan} options={{
             tabBarIcon: ({focused}) => {
                 return <Ionicons name={focused ? 'card' : 'card-outline'} size={24} color={focused ? COLORS.primary : COLORS.gray2 }/> 
-            }
+            },
+            headerShown: false
+            
         }}/>
         <Tab.Screen name='Notification' component={Notification} options={{
             tabBarIcon: ({focused}) => {
-                return <Ionicons name={focused ? 'notifications' : 'notifications-outline'} size={24} color={focused ? COLORS.primary : COLORS.gray2 }/> 
-            }
+                return <Ionicons name={focused ? 'notifications' : 'notifications-outline'} size={24} color={focused ? COLORS.primary : COLORS.gray2 } /> 
+            },
+            headerShown: true
         }}/>
         <Tab.Screen name='Profile' component={Profile} options={{
             tabBarIcon: ({focused}) => {
                 return <Ionicons name={focused ? 'person' : 'person-outline'} size={24} color={focused ? COLORS.primary : COLORS.gray2 }/> 
-            }
+            },
+            headerShown: false
         }}/>
     </Tab.Navigator>
   )

@@ -1,19 +1,22 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "./loan.styles";
 import { t } from "react-native-tailwindcss";
+import {Ionicons} from "@expo/vector-icons"
+
+
 
 const Loan = () => {
   return (
-    <SafeAreaView style={StyleSheet.create({ padding: 20 })}>
+    <SafeAreaView style={StyleSheet.create({ padding: 20, backgroundColor: '#B7D3EA' })}>
       <View>
         <Text style={styles.HeaderText}> Cicilan</Text>
       </View>
       <View style={styles.Card}>
         <View style={[t.flexRow, t.justifyBetween]}>
           <View>
-            <Text style={[t.mB1, t.textWhite]}>Tagihan Bulan Ini</Text>
+            <Text style={[t.mB1, t.textWhite, t.textBase]}>Tagihan Bulan Ini</Text>
             <Text style={[t.text2xl, t.fontSemibold, t.textWhite]}>
               Rp. 750.000
             </Text>
@@ -24,17 +27,35 @@ const Loan = () => {
         </View>
         <View style={[t.flexRow, t.justifyBetween, ]}>
           <View >
-            <Text style={[t.mB1, t.textWhite]}>Sisa Angsuran</Text>
+            <Text style={[t.mB1, t.textWhite, t.textBase]}>Sisa Angsuran</Text>
             <Text style={[t.mB1, t.textWhite, t.textLg, t.fontSemibold,]}>
               5 x Rp. 750.000
             </Text>
           </View>
           <View >
-            <Text style={[t.mB1, t.textWhite]}>Jumlah Pinjaman</Text>
-            <Text style={[t.mB1, t.textWhite, t.textLg, t.fontSemibold,]}>
+            <Text style={[t.mB1, t.textWhite, t.textBase, t.selfEnd]}>Jumlah Pinjaman</Text>
+            <Text style={[t.mB1, t.textWhite, t.textLg, t.fontSemibold, t.selfEnd]}>
               5 x Rp. 750.000
             </Text>
           </View>
+        </View>
+      </View>
+      <View style={styles.ButtonContainer }>
+        <View >
+          <Pressable style={ styles.button} >
+            <View style={[t.p2, t.roundedFull, t.bgBlue800]}>
+            <Ionicons name="wallet" size={18} color={'#fff'}/>
+            </View>
+            <Text style={[t.text2xl, t.fontMedium,]}>Tunai</Text>
+          </Pressable>
+        </View>
+        <View >
+          <Pressable style={ styles.button} >
+            <View style={[t.p2, t.roundedFull, t.bgBlue800]}>
+            <Ionicons name="wallet" size={18} color={'#fff'}/>
+            </View>
+            <Text style={[t.text2xl, t.fontMedium,]}>Tunai</Text>
+          </Pressable>
         </View>
       </View>
     </SafeAreaView>

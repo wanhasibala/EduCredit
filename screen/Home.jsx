@@ -48,7 +48,7 @@ const ItemPopular = ({ title }) => (
 const Home = () => {
   return (
     <>
-      <SafeAreaView style={styles.bodyContainer}>
+      <SafeAreaView style={styles.bodyContainer} >
           <View style={styles.Header}>
             <View>
               <Text style={styles.HeaderText(12, "regular")}>Welcome</Text>
@@ -103,6 +103,7 @@ const Home = () => {
               data={DATA}
               renderItem={({ item }) => <ItemPopular title={item.title} />}
               keyExtractor={(item) => item.id}
+              scrollEnabled= 'false'
             />
           </View>
       </SafeAreaView>

@@ -8,8 +8,7 @@ const styles= StyleSheet.create({
         marginBottom: 20,
     },
     Card:{
-        alignSelf:'center',
-        width: 320,
+        width: '100%',
         backgroundColor: COLORS.tertiary,
         padding: 20,
         borderRadius: 20,
@@ -24,6 +23,21 @@ const styles= StyleSheet.create({
         paddingHorizontal: 16,
         paddingVertical: 1,
         height: 26,
+    },
+    ButtonContainer :{
+        flexDirection: 'row', 
+        gap: 32,
+        alignSelf: 'center',
+    },
+    button: {
+        backgroundColor: '#fff',
+        paddingHorizontal: 16,
+        paddingVertical: 8,
+        borderRadius: 20,
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 8,
+
     }
 
 })
