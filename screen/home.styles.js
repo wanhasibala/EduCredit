@@ -4,7 +4,7 @@ import { COLORS } from "../constants/theme";
  
 const styles = StyleSheet.create({
     item: {
-      backgroundColor: COLORS.secondary,
+      backgroundColor: '#f9f9f9',
       padding: 8,
       marginRight: 20,
       marginVertical: 8,
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
       padding: 8,
       borderWidth: 1,
       borderRadius: 10,
-
+      borderColor: '#E0E0E0',
     },
     imageCard:{
         width: 200,
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     },
     bodyContainer: {
       padding: 20,
+      backgroundColor: '#f9f9f9'
     },
     Header: {
       width: "100%",
@@ -82,12 +83,15 @@ const styles = StyleSheet.create({
       gap: 5,
     },
     filterIcon: {
-      width: 38,
-      height: 38,
+      width: 40,
+      height: 40,
       backgroundColor: COLORS.white,
       borderRadius: 19,
       borderColor: COLORS.secondary,
       borderWidth: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingTop: 5
     },
     filter: (border, color) => ({
       paddingHorizontal: 8,

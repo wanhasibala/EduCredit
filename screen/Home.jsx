@@ -1,7 +1,7 @@
-import { View, Text, TextInput, FlatList } from "react-native";
+import { View, Text, TextInput, FlatList, ScrollView } from "react-native";
 import React from "react";
 import { StyleSheet } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import styles from "./home.styles";
 import { COLORS } from "../constants/theme";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -35,7 +35,7 @@ const Item = ({ title }) => (
 const ItemPopular = ({ title }) => (
   <View style={styles.itemPopular}>
     <View style={styles.imageCardPopular}></View>
-    <View style={StyleSheet.create({ gap: 5,})}>
+    <View style={StyleSheet.create({ gap: 5 })}>
       <Text style={styles.title}>{title}</Text>
       <View style={StyleSheet.create({ flexDirection: "row", gap: 4 })}>
         <View style={styles.profilePicture}></View>
@@ -47,67 +47,68 @@ const ItemPopular = ({ title }) => (
 );
 const Home = () => {
   return (
-    <>
-      <SafeAreaView style={styles.bodyContainer} >
-          <View style={styles.Header}>
-            <View>
-              <Text style={styles.HeaderText(12, "regular")}>Welcome</Text>
-              <Text style={styles.HeaderText(28, "bold")}>Wan Hasib</Text>
-            </View>
-            <View style={styles.HeaderProfile}></View>
-          </View>
-          <View style={styles.searchFilter}>
-            <View style={styles.textInput}>
-              <Ionicons name="search" size={20} color={"#404040"} />
-              <TextInput placeholder="Pencarian" />
-            </View>
-            <View style={styles.filterIcon}></View>
-          </View>
-          <View style={StyleSheet.create({ flexDirection: "row", gap: 5 })}>
-            <View style={styles.filter(COLORS.primary, COLORS.primary)}>
-              <Text>All Course</Text>
-            </View>
-            <View style={styles.filter(COLORS.secondary, "white")}>
-              <Text>Design</Text>
-            </View>
-            <View style={styles.filter(COLORS.secondary, "white")}>
-              <Text>Coding</Text>
-            </View>
-            <View style={styles.filter(COLORS.secondary, "white")}>
-              <Text>Business</Text>
-            </View>
-            <View style={styles.filter(COLORS.secondary, "white")}>
-              <Text>3D Modelling</Text>
-            </View>
-          </View>
+    <ScrollView>
+      <SafeAreaView style={styles.bodyContainer}>
+        <View style={styles.Header}>
           <View>
-            <FlatList
-              data={DATA}
-              renderItem={({ item }) => <Item title={item.title} />}
-              keyExtractor={(item) => item.id}
-              horizontal
-            />
+            <Text style={styles.HeaderText(12, "regular")}>Welcome</Text>
+            <Text style={styles.HeaderText(28, "bold")}>Wan Hasib</Text>
           </View>
-          <View
-            style={StyleSheet.create({
-              flexDirection: "row",
-              justifyContent: "space-between",
-              marginBottom: 20,
-            })}
-          >
-            <Text style={styles.title}> Popular</Text>
-            <Text> Lihat semua</Text>
+          <View style={styles.HeaderProfile}></View>
+        </View>
+        <View style={styles.searchFilter}>
+          <View style={styles.textInput}>
+            <Ionicons name="search" size={20} color={"#404040"} />
+            <TextInput placeholder="Pencarian" />
           </View>
-          <View>
-            <FlatList
-              data={DATA}
-              renderItem={({ item }) => <ItemPopular title={item.title} />}
-              keyExtractor={(item) => item.id}
-              scrollEnabled= 'false'
-            />
+          <View style={styles.filterIcon}>
+            <MaterialIcons name="filter-alt" size={22}/>
           </View>
+        </View>
+        <View style={StyleSheet.create({ flexDirection: "row", gap: 5 })}>
+          <View style={styles.filter(COLORS.primary, COLORS.primary)}>
+            <Text>All Course</Text>
+          </View>
+          <View style={styles.filter(COLORS.secondary, "white")}>
+            <Text>Design</Text>
+          </View>
+          <View style={styles.filter(COLORS.secondary, "white")}>
+            <Text>Coding</Text>
+          </View>
+          <View style={styles.filter(COLORS.secondary, "white")}>
+            <Text>Business</Text>
+          </View>
+          <View style={styles.filter(COLORS.secondary, "white")}>
+            <Text>3D Modelling</Text>
+          </View>
+        </View>
+        <View>
+          <FlatList
+            data={DATA}
+            renderItem={({ item }) => <Item title={item.title} />}
+            keyExtractor={(item) => item.id}
+            horizontal
+          />
+        </View>
+        <View
+          style={StyleSheet.create({
+            flexDirection: "row",
+            justifyContent: "space-between",
+            marginBottom: 20,
+          })}
+        >
+          <Text style={styles.title}> Popular</Text>
+          <Text> Lihat semua</Text>
+        </View>
+
+          <FlatList
+            data={DATA}
+            renderItem={({ item }) => <ItemPopular title={item.title} />}
+            keyExtractor={(item) => item.id}
+            scrollEnabled="false"
+          />
       </SafeAreaView>
-    </>
+    </ScrollView>
   );
 };
 
