@@ -1,10 +1,18 @@
-import { View, Text, TextInput, FlatList, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  FlatList,
+  ScrollView,
+  Pressable,
+} from "react-native";
 import React from "react";
 import { StyleSheet } from "react-native";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import styles from "./home.styles";
 import { COLORS } from "../constants/theme";
 import { SafeAreaView } from "react-native-safe-area-context";
+import ProductCardView from "../components/ProductCardView";
 
 const DATA = [
   {
@@ -20,18 +28,6 @@ const DATA = [
     title: "Third Item",
   },
 ];
-
-const Item = ({ title }) => (
-  <View style={styles.item}>
-    <View style={styles.imageCard}></View>
-    <Text style={styles.title}>{title}</Text>
-    <View style={StyleSheet.create({ flexDirection: "row", gap: 4 })}>
-      <View style={styles.profilePicture}></View>
-      <Text style={styles.mentor}>mentor name</Text>
-    </View>
-    <Text style={styles.mentor}>anjay timeline</Text>
-  </View>
-);
 const ItemPopular = ({ title }) => (
   <View style={styles.itemPopular}>
     <View style={styles.imageCardPopular}></View>
@@ -62,7 +58,7 @@ const Home = () => {
             <TextInput placeholder="Pencarian" />
           </View>
           <View style={styles.filterIcon}>
-            <MaterialIcons name="filter-alt" size={22}/>
+            <MaterialIcons name="filter-alt" size={22} />
           </View>
         </View>
         <View style={StyleSheet.create({ flexDirection: "row", gap: 5 })}>
@@ -83,30 +79,25 @@ const Home = () => {
           </View>
         </View>
         <View>
-          <FlatList
-            data={DATA}
-            renderItem={({ item }) => <Item title={item.title} />}
-            keyExtractor={(item) => item.id}
-            horizontal
-          />
+        <ProductCardView  title={ 'anjay'}/>
         </View>
         <View
-          style={StyleSheet.create({
+          style={{
             flexDirection: "row",
             justifyContent: "space-between",
             marginBottom: 20,
-          })}
+          }}
         >
           <Text style={styles.title}> Popular</Text>
           <Text> Lihat semua</Text>
         </View>
 
-          <FlatList
-            data={DATA}
-            renderItem={({ item }) => <ItemPopular title={item.title} />}
-            keyExtractor={(item) => item.id}
-            scrollEnabled="false"
-          />
+        {/* <FlatList
+          data={DATA}
+          renderItem={({ item }) => <ItemPopular title={item.title} />}
+          keyExtractor={(item) => item.id}
+          scrollEnabled="false"
+        /> */}
       </SafeAreaView>
     </ScrollView>
   );

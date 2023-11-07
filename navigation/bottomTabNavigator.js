@@ -12,11 +12,14 @@ const screenOptions = {
   tabBarHideOnKeyboard: true,
   tabBarStyle: {
     position: "absolute",
-    bottom: 0,
-    right: 0,
-    left: 0,
+    bottom: 20,
+    right: 20,
+    left: 20,
     elevation: 0,
-    height: 90,
+    height: 60,
+    borderRadius: 16, 
+    paddingBottom: 2,
+    paddingTop: 2
   },
 };
 

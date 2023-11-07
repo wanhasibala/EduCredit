@@ -94,4 +94,3 @@ const ProfileCard = () => {
 
 export default ProfileCard;
 
-const styles = StyleSheet.create({});
