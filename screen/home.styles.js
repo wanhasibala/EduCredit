@@ -3,50 +3,6 @@ import { COLORS } from "../constants/theme";
 
  
 const styles = StyleSheet.create({
-    item: {
-      backgroundColor: '#f9f9f9',
-      padding: 8,
-      marginRight: 20,
-      marginVertical: 8,
-      borderRadius: 10,
-      shadowColor: '#000000',
-      shadowOffset: {object: {width: 0.5, height: 0}},
-      shadowOpacity: 0.25,
-      marginBottom: 20,
-    },
-    itemPopular:{
-      flexDirection: 'row',
-      marginBottom: 20,
-      gap: 10,
-      padding: 8,
-      borderWidth: 1,
-      borderRadius: 10,
-      borderColor: '#E0E0E0',
-    },
-    imageCard:{
-        width: 200,
-        height: 150,
-        backgroundColor: COLORS.primary,
-    },
-    imageCardPopular:{
-        width: 80,
-        height: 80,
-        backgroundColor: COLORS.primary,
-        borderRadius: 5,
-    },
-    title: {
-      fontSize: 24,
-      fontWeight: 'bold',
-    },
-    profilePicture:{
-        width: 20,
-        height: 20,
-        borderRadius: 10,
-        backgroundColor: COLORS.primary,
-    },
-    mentor: {
-      fontSize: 16,
-    },
     bodyContainer: {
       padding: 20,
       backgroundColor: '#f9f9f9'

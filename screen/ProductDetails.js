@@ -25,13 +25,13 @@ const DATA = [
 ];
 
 const ProductDetails = () => {
-  const navigation =useNavigation();
+  const navigation = useNavigation();
   return (
-    <View style={{ flex: 1 }}>
-      <SafeAreaView style={{ height: "auto" }}>
-        <ScrollView >
+    <SafeAreaView style={{ height: "100%" }}>
+      <View style={{ flex: 1 }}>
+        <ScrollView>
           <View style={styles.Header}>
-            <TouchableOpacity onPress={()=>navigation.goBack()}>
+            <TouchableOpacity onPress={() => navigation.goBack()}>
               <View style={styles.HeaderButton}>
                 <Ionicons name="chevron-back" size={24} />
               </View>
@@ -43,7 +43,11 @@ const ProductDetails = () => {
               <Ionicons name="bookmark-outline" size={20} />
             </View>
           </View>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} snapToAlignment="center" >
+          <ScrollView
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            snapToAlignment="center"
+          >
             <View style={styles.videoContainer}>
               <View style={styles.videoPlayer}>
                 <Text>anjay</Text>
@@ -103,7 +107,7 @@ const ProductDetails = () => {
             </View>
           </View>
         </ScrollView>
-      </SafeAreaView>
+      </View>
       <View
         style={{
           position: "absolute",
@@ -125,7 +129,7 @@ const ProductDetails = () => {
           <Text style={{ color: "#fff", fontSize: 20 }}>Enroll Now</Text>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
