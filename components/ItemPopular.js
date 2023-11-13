@@ -1,21 +1,26 @@
-import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import { COLORS } from "../constants/theme";
 import { useNavigation } from "@react-navigation/native";
 
-const ItemPopular = ({ title }) => {
+const ItemPopular = ({ title, image, mentor, duration, mentorImage }) => {
   const navigation = useNavigation();
   return (
     <TouchableOpacity onPress={() => navigation.navigate("ProductDetails")}>
       <View style={styles.itemPopular}>
-        <View style={styles.imageCardPopular}></View>
+        <Image source={{ uri: `${image}` }} style={styles.imageCardPopular} />
         <View style={{ gap: 5 }}>
-          <Text style={{ fontSize: 24, fontWeight: "bold" }}>{title}</Text>
+          <Text
+            numberOfLines={1}
+            style={{ fontSize: 24, fontWeight: "bold", width: 250 }}
+          >
+            {title}
+          </Text>
           <View style={StyleSheet.create({ flexDirection: "row", gap: 4 })}>
-            <View style={styles.profilePicture}></View>
-            <Text style={{ fontSize: 16 }}>mentor name</Text>
+              <Image source={{uri: `${mentorImage}`}} style={styles.profilePicture}/>
+            <Text style={{ fontSize: 16 }}>{mentor}</Text>
           </View>
-          <Text style={{ fontSize: 16 }}>anjay timeline</Text>
+          <Text style={{ fontSize: 16 }}>{duration} </Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -37,7 +42,6 @@ const styles = StyleSheet.create({
   imageCardPopular: {
     width: 80,
     height: 80,
-    backgroundColor: COLORS.primary,
     borderRadius: 5,
   },
   profilePicture: {

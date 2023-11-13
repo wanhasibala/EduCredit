@@ -13,12 +13,13 @@ import { COLORS } from "../constants/theme";
 import ProductCardView from "../components/ProductCardView";
 import ItemPopular from "../components/ItemPopular";
 import { DATA } from "../data/courseData";
+``;
 
 const Home = () => {
   return (
     <View style={styles.bodyContainer}>
-        <SafeAreaView>
-      <ScrollView>
+      <SafeAreaView>
+        <ScrollView>
           <View style={styles.Header}>
             <View>
               <Text style={styles.HeaderText(12, "regular")}>Welcome</Text>
@@ -55,7 +56,15 @@ const Home = () => {
           <ScrollView>
             <FlatList
               data={DATA}
-              renderItem={({ item }) => <ProductCardView title={item.title} />}
+              renderItem={({ item }) => (
+                <ProductCardView
+                  title={item.title}
+                  mentor={item.mentor}
+                  duration={item.duration}
+                  image={item.image}
+                  mentorImage={item.mentorImage}
+                />
+              )}
               keyExtractor={(item) => item.id}
               horizontal
             />
@@ -73,12 +82,20 @@ const Home = () => {
 
           <FlatList
             data={DATA}
-            renderItem={({ item }) => <ItemPopular title={item.title} />}
+            renderItem={({ item }) => (
+              <ItemPopular
+                title={item.title}
+                mentor={item.mentor}
+                duration={item.duration}
+                image={item.image}
+                mentorImage={item.mentorImage}
+              />
+            )}
             keyExtractor={(item) => item.id}
             scrollEnabled="false"
           />
-      </ScrollView>
-        </SafeAreaView>
+        </ScrollView>
+      </SafeAreaView>
     </View>
   );
 };

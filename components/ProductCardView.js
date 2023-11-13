@@ -1,30 +1,36 @@
-import { StyleSheet, Text, View, Pressable } from "react-native";
+import { StyleSheet, Text, View, Pressable, Image } from "react-native";
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { ProductDetails } from "../screen";
 import { COLORS } from "../constants/theme";
 
-const ProductCardView = ({title}) => {
+const ProductCardView = ({ title, image, mentor, duration, mentorImage }) => {
   const navigation = useNavigation();
 
   return (
     <Pressable onPress={() => navigation.navigate("ProductDetails")}>
-        <View style={styles.item}>
-          <View style={styles.imageCard}></View>
-          <Text
-            style={{
-              fontSize: 24,
-              fontWeight: "bold",
-            }}
-          >
-            {title}
-          </Text>
-          <View style={{ flexDirection: "row", gap: 4 }}>
-            <View style={styles.profilePicture}></View>
-            <Text style={{ fontSize: 16 }}>mentor name</Text>
-          </View>
-          <Text style={{ fontSize: 16 }}>anjay timeline</Text>
+      <View style={styles.item}>
+        <Image
+          source={{uri: `${image}`}}
+          resizeMode="cover"
+          style={styles.imageCard}
+        />
+        <Text
+          numberOfLines={1}
+          style={{
+            fontSize: 24,
+            fontWeight: "bold",
+            width: 200,
+          }}
+        >
+          {title}
+        </Text>
+        <View style={{ flexDirection: "row", gap: 4 }}>
+          <Image source={{uri: `${mentorImage}`}} style={styles.profilePicture} />
+          <Text style={{ fontSize: 16 }}>{mentor}</Text>
         </View>
+        <Text style={{ fontSize: 16 }}>{duration}</Text>
+      </View>
     </Pressable>
   );
 };
@@ -46,7 +52,6 @@ const styles = StyleSheet.create({
   imageCard: {
     width: 200,
     height: 150,
-    backgroundColor: COLORS.primary,
   },
   profilePicture: {
     width: 20,
