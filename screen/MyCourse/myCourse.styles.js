@@ -5,7 +5,6 @@ const styles= StyleSheet.create({
     HeaderText: {
         fontSize: 32,
         fontWeight: '600',
-        marginBottom: 20,
     },
     Card:{
         width: '100%',

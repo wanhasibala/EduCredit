@@ -3,7 +3,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../constants/theme";
-import { Home, Notification, Loan, Profile } from "../screen/index";
+import { Home, Notification, MyCourse, Profile } from "../screen/index";
 
 const Tab = createBottomTabNavigator();
 
@@ -52,8 +52,8 @@ const BottomTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Loan"
-        component={Loan}
+        name="MyCourse"
+        component={MyCourse}
         options={{
           tabBarIcon: ({ focused }) => {
             return (
@@ -65,8 +65,8 @@ const BottomTabNavigator = () => {
                 }}
               >
                 <Ionicons
-                  name="card"
-                  size={24}
+                  name="play-circle"
+                  size={28}
                   color={focused ? "#EDEDED" : COLORS.gray2}
                 />
               </View>
