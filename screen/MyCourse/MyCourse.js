@@ -54,6 +54,8 @@ const MyCourse = () => {
                 progress={item.progress}
                 image={item.image}
                 width={item.progress}
+                mentor={item.mentor}
+                mentorImage={item.mentorImage}
               />
             )}
             keyExtractor={(item) => item.id}

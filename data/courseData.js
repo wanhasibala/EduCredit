@@ -36,5 +36,24 @@ export const DATA = [
       mentorImage: 'https://plus.unsplash.com/premium_photo-1664870883044-0d82e3d63d99?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       progress: 75
     },
+    {
+      id: 3,
+      title: "Python Programming Basics",
+      category: "Coding",
+      is_popular: false,
+      mentor: "Sarah Johnson",
+      duration: "6 weeks",
+      description: "Get started with Python programming. Cover the fundamentals and basic concepts of coding.",
+      videos_count: 30,
+      tutorial_videos: [
+        "Python Syntax and Variables",
+        "Conditional Statements",
+        "Loops and Functions",
+        "Data Structures",
+      ],
+      image: 'https://plus.unsplash.com/premium_photo-1664870883044-0d82e3d63d99?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      mentorImage: 'https://plus.unsplash.com/premium_photo-1664870883044-0d82e3d63d99?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      progress: 75
+    },
    
   ];

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -38,8 +38,10 @@ const ProfileCard = () => {
             </Text>
           </View>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <Text style={{ fontSize: 12, fontWeight: "400", color: "#FFEFCC" }}>History</Text>
-            <Ionicons name="chevron-forward" color="white" size={12}  />
+            <Text style={{ fontSize: 12, fontWeight: "400", color: "#FFEFCC" }}>
+              History
+            </Text>
+            <Ionicons name="chevron-forward" color="white" size={12} />
           </View>
         </View>
         <View
@@ -52,16 +54,17 @@ const ProfileCard = () => {
             alignItems: "center",
           }}
         >
-          <View
+          <Image
+            source={{
+              uri: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            }}
             style={{
               width: 60,
               height: 60,
               borderRadius: 40,
               backgroundColor: "white",
             }}
-          >
-            <Text>image anjay</Text>
-          </View>
+          />
           <Text style={{ color: "white", fontSize: 20, fontWeight: "600" }}>
             Wan Hasib Al Aslamy
           </Text>
@@ -93,4 +96,3 @@ const ProfileCard = () => {
 };
 
 export default ProfileCard;
-

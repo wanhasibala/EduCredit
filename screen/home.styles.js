@@ -5,7 +5,8 @@ import { COLORS } from "../constants/theme";
 const styles = StyleSheet.create({
     bodyContainer: {
       padding: 20,
-      backgroundColor: '#f9f9f9'
+      backgroundColor: '#f9f9f9',
+      overflow: 'visible'
     },
     Header: {
       width: "100%",
@@ -21,8 +22,8 @@ const styles = StyleSheet.create({
     HeaderProfile: {
       width: 56,
       height: 56,
-      backgroundColor: COLORS.primary,
       borderRadius: 56,
+      paddingTop: 20,
     },
     searchFilter: {
       flexDirection: "row",
