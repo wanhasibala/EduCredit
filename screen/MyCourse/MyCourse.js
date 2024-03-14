@@ -59,7 +59,7 @@ const MyCourse = () => {
               />
             )}
             keyExtractor={(item) => item.id}
-            scrollEnabled="false"
+            // scrollEnabled="false"
           />
         </View>
       </SafeAreaView>

@@ -1,4 +1,4 @@
-import Home from "./Home";
+import Home from "./Home/Home";
 import Notification from "./Notification/Notification";
 import Profile from "./Profile";
 import ProductDetails from "./ProductDetails";

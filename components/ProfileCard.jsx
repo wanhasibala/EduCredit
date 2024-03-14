@@ -7,11 +7,11 @@ const ProfileCard = () => {
     <>
       <View
         style={{
-          width: 325,
-          height: 230,
+          width: "90%",
+          height:230,
           alignSelf: "center",
           marginTop: 20,
-          borderRadius: 10,
+          borderRadius: 20,
           backgroundColor: "#367A59",
         }}
       >
@@ -23,7 +23,7 @@ const ProfileCard = () => {
             justifyContent: "space-between",
           }}
         >
-          <View style={{ flexDirection: "row", alignItems: "center", gap: 5 }}>
+          <View style={{ flexDirection: "row", alignItems: "center", gap:5 }}>
             <View
               style={{
                 padding: 2,
@@ -33,7 +33,7 @@ const ProfileCard = () => {
             >
               <Ionicons name="star" color="#43936C" size={12} />
             </View>
-            <Text style={{ fontSize: 20, fontWeight: "600", color: "#FFEFCC" }}>
+            <Text style={{ fontSize: 16, fontWeight: "600", color: "#FFEFCC" }}>
               700
             </Text>
           </View>
@@ -44,16 +44,7 @@ const ProfileCard = () => {
             <Ionicons name="chevron-forward" color="white" size={12} />
           </View>
         </View>
-        <View
-          style={{
-            backgroundColor: "#090909",
-            flex: 1,
-            borderRadius: 10,
-            padding: 20,
-            gap: 10,
-            alignItems: "center",
-          }}
-        >
+        <View style={styles.ProfileCard}>
           <Image
             source={{
               uri: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -62,7 +53,6 @@ const ProfileCard = () => {
               width: 60,
               height: 60,
               borderRadius: 40,
-              backgroundColor: "white",
             }}
           />
           <Text style={{ color: "white", fontSize: 20, fontWeight: "600" }}>
@@ -71,24 +61,16 @@ const ProfileCard = () => {
           <Text style={{ color: "white", fontSize: 16, fontWeight: "500" }}>
             +62 8953 37443659
           </Text>
-          <View
-            style={{
-              width: "100%",
-              backgroundColor: "#F9F8F8",
-              paddingHorizontal: 10,
-              paddingVertical: 5,
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
-              borderRadius: 20,
-            }}
-          >
+          <Text style={{ color: "white", fontSize: 16, fontWeight: "500" }}>
+            wanhasibal1122@gmail.com
+          </Text>
+          {/* <View style={styles.Member}>
             <Text>Gold Member</Text>
-            <View style={{ flexDirection: "row" }}>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
               <Text>See Benefits</Text>
               <Ionicons name="chevron-forward" size={16} />
             </View>
-          </View>
+          </View> */}
         </View>
       </View>
     </>
@@ -96,3 +78,23 @@ const ProfileCard = () => {
 };
 
 export default ProfileCard;
+const styles = StyleSheet.create({
+  ProfileCard: {
+    backgroundColor: "#090909",
+    flex: 1,
+    borderRadius: 20,
+    padding: 20,
+    gap: 5,
+    alignItems: "center",
+  },
+  Member: {
+    width: "100%",
+    backgroundColor: "#F9F8F8",
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    borderRadius: 20,
+  },
+});

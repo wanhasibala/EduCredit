@@ -27,8 +27,8 @@ const DATA = [
 const ProductDetails = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView style={{ height: "100%" }}>
-      <View style={{ flex: 1 }}>
+    <SafeAreaView style={{flex: 1, paddingTop: 20,}}>
+      <View >
         <ScrollView>
           <View style={styles.Header}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
@@ -40,7 +40,7 @@ const ProductDetails = () => {
               Detail Course
             </Text>
             <View style={styles.HeaderButton}>
-              <Ionicons name="bookmark-outline" size={20} />
+              <Ionicons name="heart-outline" size={24} />
             </View>
           </View>
           <ScrollView

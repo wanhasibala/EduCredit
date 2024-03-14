@@ -44,14 +44,18 @@ const styles = StyleSheet.create({
     marginRight: 20,
     marginVertical: 8,
     borderRadius: 10,
+    borderColor: COLORS.gray,
+    borderWidth: .25,
     shadowColor: "#000000",
     shadowOffset: { object: { width: 0.5, height: 0 } },
     shadowOpacity: 0.25,
     marginBottom: 20,
+    gap: 5
   },
   imageCard: {
     width: 200,
     height: 150,
+    borderRadius: 5,
   },
   profilePicture: {
     width: 20,

@@ -10,9 +10,9 @@ const styles = StyleSheet.create({
   HeaderButton: {
     paddingHorizontal: 6,
     paddingVertical: 5,
-    backgroundColor: "white",
     borderRadius: 30,
-    shadowColor: "#090909",
+    borderWidth: 1,
+    borderColor: '#E0E0E0',
     shadowOffset: { height: 2, width: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 2,
