@@ -8,11 +8,13 @@ const ProfileCard = () => {
       <View
         style={{
           width: "90%",
-          height:230,
-          alignSelf: "center",
-          marginTop: 20,
+          height:260,
+          alignSelf: "flex-start",
+          
+          margin: 20,
           borderRadius: 20,
           backgroundColor: "#367A59",
+          
         }}
       >
         <View
@@ -23,23 +25,10 @@ const ProfileCard = () => {
             justifyContent: "space-between",
           }}
         >
-          <View style={{ flexDirection: "row", alignItems: "center", gap:5 }}>
-            <View
-              style={{
-                padding: 2,
-                backgroundColor: "#FFEFCC",
-                borderRadius: 10,
-              }}
-            >
-              <Ionicons name="star" color="#43936C" size={12} />
-            </View>
-            <Text style={{ fontSize: 16, fontWeight: "600", color: "#FFEFCC" }}>
-              700
-            </Text>
-          </View>
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
+          <View></View>
+          <View style={{ flexDirection: "row", alignItems: "center", alignSelf: "" }}>
             <Text style={{ fontSize: 12, fontWeight: "400", color: "#FFEFCC" }}>
-              History
+              Payment History
             </Text>
             <Ionicons name="chevron-forward" color="white" size={12} />
           </View>
@@ -64,13 +53,13 @@ const ProfileCard = () => {
           <Text style={{ color: "white", fontSize: 16, fontWeight: "500" }}>
             wanhasibal1122@gmail.com
           </Text>
-          {/* <View style={styles.Member}>
-            <Text>Gold Member</Text>
+          <View style={styles.Member}>
+            <Text>Tagihan</Text>
             <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <Text>See Benefits</Text>
+              <Text style={{fontSize: 12}}>Rp.1.500.000 </Text>
               <Ionicons name="chevron-forward" size={16} />
             </View>
-          </View> */}
+          </View>
         </View>
       </View>
     </>
@@ -92,6 +81,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F9F8F8",
     paddingHorizontal: 10,
     paddingVertical: 5,
+    marginVertical: 10,
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",

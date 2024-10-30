@@ -27,7 +27,7 @@ const MyCourse = () => {
               borderColor: "#e5e5e5",
             }}
           >
-            <Ionicons name="chevron-back" size={24} />
+            {/* <Ionicons name="chevron-back" size={24} /> */}
           </View>
           <View style={{ alignItems: "center", gap: 5 }}>
             <Text style={styles.HeaderText}> My Course</Text>
@@ -42,7 +42,7 @@ const MyCourse = () => {
               borderColor: "#e5e5e5",
             }}
           >
-            <Ionicons name="search" size={24} />
+            {/* <Ionicons name="search" size={24} /> */}
           </View>
         </View>
         <View>

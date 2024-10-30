@@ -12,6 +12,8 @@ import { Ionicons } from "@expo/vector-icons";
 import styles from "./ProductDetails.styles";
 import ContentPreview from "../components/ContentPreview";
 import { useNavigation } from "@react-navigation/native";
+import { SliderItem } from "../components/SliderItem";
+import { Slider } from "../components/Slider";
 
 const DATA = [
   {
@@ -24,12 +26,14 @@ const DATA = [
   },
 ];
 
-const ProductDetails = () => {
+
+const ProductDetails = ({ route }) => {
+  const course = route.params;
   const navigation = useNavigation();
   return (
-    <SafeAreaView style={{flex: 1, paddingTop: 20,}}>
-      <View >
-        <ScrollView>
+    <SafeAreaView style={{ flex: 1, paddingTop: 20 }}>
+      <View>
+        <View>
           <View style={styles.Header}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
               <View style={styles.HeaderButton}>
@@ -43,23 +47,20 @@ const ProductDetails = () => {
               <Ionicons name="heart-outline" size={24} />
             </View>
           </View>
-          <ScrollView
+          {/* Video Container SlideShow */}
+          {/* <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
             snapToAlignment="center"
-          >
-            <View style={styles.videoContainer}>
-              <View style={styles.videoPlayer}>
-                <Text>anjay</Text>
-              </View>
-              <View style={styles.videoPlayer}>
-                <Text>anjay</Text>
-              </View>
-              <View style={styles.videoPlayer}>
-                <Text>anjay</Text>
-              </View>
-            </View>
-          </ScrollView>
+          > */}
+          {/* <Slider /> */}
+          {/* <Text>Halo</Text> */}
+          {/* </ScrollView> */}
+          <View>
+            <Slider />
+
+          </View>
+
           <View style={styles.contentHeader}>
             <View style={styles.HeaderTitle}>
               <Text style={{ fontSize: 24, fontWeight: "600" }}>
@@ -106,7 +107,7 @@ const ProductDetails = () => {
               />
             </View>
           </View>
-        </ScrollView>
+        </View>
       </View>
       <View
         style={{

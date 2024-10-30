@@ -23,7 +23,7 @@ const CoursePaid = ( { title,image, mentor, mentorImage, progress,width }) => {
           <View style={styles.progress}>
             <View style={[styles.progressChild, styles.progressLayout]} />
             <View style={[styles.progressLayout, { width: `${width}%`, backgroundColor: '#FFB200',left: 0,borderRadius: 20, }] } />
-            <Text style={[styles.text,{left: `${width-14}%`} ]}>{progress}%</Text>
+            <Text style={[styles.text,{left: `${width-15}%`, width: "auto"} ]}>{progress}%</Text>
           </View>
         </View>
       </View>
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 1,
-    fontSize: 16,
+    fontSize: 12,
     letterSpacing: -0.1,
     lineHeight: 20,
     width: 36,

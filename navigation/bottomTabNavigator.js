@@ -17,7 +17,7 @@ const screenOptions = {
     left: 20,
     elevation: 0,
     height: 60,
-    borderRadius: 16, 
+    borderRadius: 99, 
     paddingBottom: 2,
     paddingTop: 2
   },
@@ -37,7 +37,7 @@ const BottomTabNavigator = () => {
                   backgroundColor: focused ? "#133D60" : "#fff",
                   paddingHorizontal: 8,
                   paddingVertical: 7,
-                  borderRadius: 50,
+                  borderRadius: 99,
                 }}
               >
                 <Ionicons
@@ -60,8 +60,9 @@ const BottomTabNavigator = () => {
               <View
                 style={{
                   backgroundColor: focused ? "#133D60" : "#fff",
-                  padding: 8,
-                  borderRadius: 20,
+                  paddingHorizontal: 8,
+                  paddingVertical: 6,
+                  borderRadius: 99,
                 }}
               >
                 <Ionicons

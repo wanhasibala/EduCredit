@@ -1,7 +1,6 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { ScrollView } from "react-native-gesture-handler";
-import { t } from "react-native-tailwindcss";
 import styles from "./Notification.styles";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -41,7 +40,7 @@ const NotificationReg = ({ text, icon }) => (
 const Notification = () => {
   return (
     <>
-      <View style={[t.m5]}>
+      <View style={{margin: 20}}>
         <Text style={styles.HeaderText}>Highlight</Text>
         <FlatList
           data={NOTIFICATION}
@@ -52,7 +51,7 @@ const Notification = () => {
           horizontal
         />
       </View>
-      <View style={[t.m5]}>
+      <View style={{margin: 20}}>
         <Text style={styles.HeaderText}> Today </Text>
         <FlatList 
         data={NOTIFICATION}

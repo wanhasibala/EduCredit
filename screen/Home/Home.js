@@ -22,10 +22,10 @@ import ProfilePicture from "../../components/ProfilePicture";
 const Home = () => {
   const navigation = useNavigation();
   return (
-    <SafeAreaView style={{ paddingTop: 20 }}>
+    <SafeAreaView style={{ paddingTop: 20 }}  >
       <View style={styles.bodyContainer}>
         <ScrollView
-        // showsVerticalScrollIndicator="false"
+        showsVerticalScrollIndicator="false"
         >
           <View style={styles.Header}>
             <View>
